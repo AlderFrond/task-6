@@ -40,7 +40,7 @@ namespace WindowsFormsApplication2
         {
             x.Text = e.X.ToString(); 
             y.Text = e.Y.ToString();
-
+            
             if (rectangle.IsInside(e.X, e.Y))
             {
                 rectangle.Color = Color.Aqua;
@@ -56,8 +56,8 @@ namespace WindowsFormsApplication2
         {
             if (rectangle.IsInside(e.X, e.Y))
             {
-                rectangle.X = r.Next(0, Width - rectangle.Width);
-                rectangle.Y = r.Next(0, Height - rectangle.Height);
+                rectangle.X = r.Next(0, Width - rectangle.Width - 15);
+                rectangle.Y = r.Next(0, Height - rectangle.Height - 40);
 
                 newx.Text = rectangle.X.ToString();
                 newy.Text = rectangle.Y.ToString();
